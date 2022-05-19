@@ -1,22 +1,26 @@
-import { FaTrashAlt } from 'react-icons/fa'
+import { FaTrashAlt } from "react-icons/fa"
 
 const Post = ({ post, onDelete }) => {
-    return (
-      <div
-        className='post'>
-        <h3>
-            {post.text}
-            <FaTrashAlt style={{ 
-                padding: 3,
-                color: 'white', 
-                backgroundColor: 'black' , 
-                cursor : 'pointer' }}
-                onClick={() => onDelete(post.id)}
-                />
-        </h3>
-        <p>{post.day}</p>
+  return (
+    <div className="post">
+      <h3>{post.text}</h3>
+
+      <div className="post-date">
+        <p>{new Date(post.date).toLocaleDateString()}</p>
+        <FaTrashAlt
+          style={{
+            padding: 3,
+            color: "white",
+            backgroundColor: "black",
+            cursor: "pointer",
+            width: 20,
+            height: 20,
+          }}
+          onClick={() => onDelete(post.id)}
+        />
       </div>
-    )
-  }
-  
-  export default Post
+    </div>
+  )
+}
+
+export default Post
