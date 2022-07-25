@@ -1,3 +1,7 @@
+# Simple Announcement Board React App
+
+Users can add announcements to a board and let everybody know what is on their mind. The app uses a mock backend that stores the list of announcements as a JSON file.
+
 ## Usage
 
 ### Install dependencies
